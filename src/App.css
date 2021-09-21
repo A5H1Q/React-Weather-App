@@ -1,29 +1,46 @@
 .App {
- top: 8%;
+ height: auto;
+ width: 100%;
+ max-width: 500px;
  position: absolute;
  left: 0;
  right: 0;
- display: flex;
- align-content: center;
- justify-content: center;
- flex-direction: column;
- align-items: center;
+ margin: 0 auto;
+ top: 20px;
+ bottom: 20px;
+ box-sizing: border-box;
+ padding: 20px;
+ overflow: auto;
 }
-input {
+
+.App::-webkit-scrollbar {
+ width: 8px;
+}
+.App::-webkit-scrollbar-thumb {
+ background: #6e6e6e78;
+ border-radius: 10px;
+}
+.App::-webkit-scrollbar-track {
+ background: transparent;
+}
+​ input {
  padding: 10px;
  outline: none;
  box-sizing: border-box;
 }
 input[type="text"] {
  width: calc(100% - 73px);
+ outline: none;
  border: none;
  border-radius: 4px;
+ padding: 10px;
+ box-sizing: border-box;
 }
 
 .box {
  padding: 15px;
  display: flex;
- width: calc(100% - 20px);
+ width: 100%;
  box-sizing: border-box;
  max-width: 500px;
  -webkit-backdrop-filter: blur(10px);
@@ -47,7 +64,7 @@ svg:hover {
 }
 .tile {
  margin-top: 40px;
- width: calc(100% - 20px);
+ width: 100%;
  max-width: 500px;
  color: #202020;
  padding: 30px;
@@ -67,8 +84,23 @@ svg:hover {
 i {
  font-size: 12px;
 }
+footer {
+ color: #ccc;
+ position: absolute;
+ bottom: 35px;
+ left: 0;
+ right: 0;
+ font-size: 12px;
+ margin: 0 auto;
+ text-align: center;
+}
+footer > a {
+ color: #ccc;
+ font-size: 12px;
+}
+
 @media screen and (min-width: 625px) {
  .App {
-  top: 30%;
+  top: 25%;
  }
 }
